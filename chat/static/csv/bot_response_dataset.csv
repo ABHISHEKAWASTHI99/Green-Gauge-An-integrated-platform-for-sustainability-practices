@@ -1,14 +1,13 @@
 response,tag
-We can deliver food upto 10 km from our location for free,delivery
-10 km is the distance we can deliver food for free,delivery
-"available options are Mexican Pizza, Cheese Margerita, Chicken nuggets only ",menu
-"Mexican Pizza, Cheese Margerita, Chicken nuggets only ",menu
-"We have Mexican Pizza, Cheese Margerita, Chicken nuggets",menu
-"our address is 121/2312, hazratganj, lucknow",address
-we are open from 10am  to  8pm,timing
-10am  to  8pm ,timing
-"buy 2 mexican pizza get 1 cold drink free, buy 5 large pizza combo at Rs. 2000 only",combo
-"buy 5 large pizza combo at Rs. 2000 only,buy 2 mexican pizza get 1 cold drink free,",combo
-"offer 1 - 5 large pizza combo at Rs. 2000 only, offer 2 - 2 mexican pizza get 1 cold drink free,",combo
-"-> 10% discount on 2 pizzas, -> 30% discount on chiken nuggets",offers
-"-> get 10% discount on 2 pizzas this week , -> get 30% discount on chiken nuggets ",offers
+Hello and welcome,greet
+Hii and welcome to Green Gauge,greet
+"Green Gauge is a platform to make people aware about sustainability living practices",greengauge
+"Green gauge is an integrated platform where you can complete task , read blogs and buy merchandise",greengauge
+"We have blogs related to sustainable living practices ",blog
+"Our blogs are all about sustainable living practices",blog
+These tasks help you to attain a more sustainable life style,task
+Complete the tasks to have a more sustainable life,task
+"We offer a wide range of products like bamboo bottles,shoes,etc",merchandise
+"We offer merchandise made of recycled and sustainable material",merchandise
+"Reports are generated on base of your score",report
+"Complete more tasks to get more points",report

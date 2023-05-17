@@ -8,9 +8,9 @@
         <div class="col-md-8 mx-auto">
             <form>
                 <div class="input-group mb-3 shadow-lg">
-                    <input type="text" placeholder="enter your query" class="form-control" name="query" id="query">
+                    <input type="text" placeholder="Enter your query" class="form-control" name="query" id="query">
                     <div class="input-group-append">
-                        <button type="button" class="btn btn-outline-success">send</button>
+                        <button type="submit" class="btn btn-outline-success">send</button>
                     </div>
                 </div>
             </form>
@@ -32,7 +32,7 @@
     function doquery(e) {
         query = $('#query').val()
         if (query.length > 0) {
-            $('.area').append('<p-3 text-lg ms-auto">' + query + '</li><br class="clearfix">')
+            $('.area').append('<p-3 text-lg ms-auto">' +query+ '</li><br class="clearfix">')
             $.ajax({
                 type: 'GET',
                 url: '/chat/reply',
@@ -56,6 +56,5 @@
             doquery(e);
         })
     });
-
 </script>
 {% endblock %}

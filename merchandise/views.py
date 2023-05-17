@@ -17,14 +17,11 @@ def merchandise(request):
     
     return render(request, 'merchandise/merchandise.html', context)
 
+@login_required
 def merchandise_detail(request, merchandise_id):
     merchandise = get_object_or_404(Merchandise, pk=merchandise_id)
     
     context = {
         'merchandise': merchandise,
     }
-    
     return render(request, 'merchandise/merchandise_detail.html', context)
-@login_required
-def checkout(request):
-    return render(request, 'merchandise/checkout.html')

@@ -26,7 +26,6 @@ urlpatterns = [
     path('merchandise/',include('merchandise.urls')),
     path('userprofile/',include('userprofile.urls')),
     path('chat/',include('chat.urls')),
-    path('tinymce/', include('tinymce.urls')),
     path('', include('app.urls')),
     
 ]

@@ -7,13 +7,8 @@ import random
 rdf = pd.read_csv(r'D:\Green-Gauge\chat\static\csv\bot_response_dataset.csv')
 
 def load_model():
-    with open(r'chat\static\models\model.pkl', 'rb') as f:
+    with open(r'D:\Green-Gauge\chat\static\models\model.pkl', 'rb') as f:
         return pickle.loads(f.read())
-
-def index(request):
-    
-    
-    return render(request, 'chat/index.html')
 
 
 def predict_tag(txt='Hello world', vectorizer=None,
@@ -42,3 +37,6 @@ def predict(request):
         response = 'please ask me a question'
 
     return JsonResponse({'botreply':response, 'query' : query})
+
+def index(request):
+    return render(request, 'chat/index.html')

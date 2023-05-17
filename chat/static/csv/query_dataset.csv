@@ -1,22 +1,17 @@
 query,tag
-what is the basic distance for free delivery?,delivery
-how far can you deliver for free?,delivery
-is free delivery available?,delivery
-what is in the menu?,menu
-what are the options in the menu,menu
-show me the menu,menu
-is there any offer,offers
-what are the offers on the pizza,offers
-are discount offers available?,offers
-when do you close?,timing
-when do you open?,timing
-what is closing time?,timing
-how do we reach?,address
-are you available in lucknow?,address
-where are you located?,address
-are you open at 9am,timing
-is there any pizza combos,combo
-what is combo offer of the week,combo
-available combo offers,combo
-are there burgers available?,menu
-do you deliver free of cost?,delivery
+Hii,greet
+Hello,greet
+what is green gauge,greengauge
+tell me about green gauge?,greengauge
+what is in the blog section,blog
+what type of blogs are there,blog
+what type of articles are there?,blog
+what are the tasks,task
+what type of tasks are there,task
+what is task,task
+what type of merchandise you offer?,merchandise
+what do you offer in merchandise section,merchandise
+what kind of things you sell,merchandise
+how do i get my report,report
+how is the report made?,report
+what is the purpose of green gauge?,greengauge
