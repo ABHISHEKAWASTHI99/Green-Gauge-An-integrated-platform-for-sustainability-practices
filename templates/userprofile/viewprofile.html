@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+
+{% block content %}
+    
+    {% for items in Userprofile %}
+    <div class="viewprofile">
+        <p>{{items.userprofile.image}}</p>
+        <p>{{items.name}}</p>
+        <p>{{items.email}}</p>
+        <p>{{items.address}}</p>
+        <p>{{items.phone}}</p>
+        <p>{{items.city}}</p>
+
+    </div>
+        
+    {% endfor %}
+        
+{% endblock %}
+    

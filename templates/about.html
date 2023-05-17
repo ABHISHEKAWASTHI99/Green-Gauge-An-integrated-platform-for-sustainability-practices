@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+{% block content %}
+<div class="about-head">
+    <img src="\media\GREEN GAUGE LOGO.png" class="img-fluid" alt="Brand-logo">
+</div>
+<div class="about">
+    <h2>About Us:</h2>
+     <p>About Us:
+        We are the team behind the "Green Gauge" project, a dedicated group of individuals passionate about sustainability and environmental conservation.
+        Our mission is to raise awareness about the importance of sustainable practices and provide a platform for individuals to actively engage in eco-friendly initiatives.
+        Through our website, we offer informative blogs, interactive tasks, a helpful chatbot, and a merchandise store featuring sustainable products. We strive to empower individuals to make positive environmental changes and create a greener future for generations to come.
+        Together, let's make a difference and promote a sustainable lifestyle.
+    </p>
+        
+</div>
+{% endblock  %}
+
+
+{% block css %}
+    <style>
+        .about-head{
+            text-align: center;
+            padding: 20px;
+        }
+        .about{
+            padding: 20px;
+        }
+        main{
+            background-color: black;
+            color: forestgreen;
+        }    
+    </style>
+{% endblock  %}
+    

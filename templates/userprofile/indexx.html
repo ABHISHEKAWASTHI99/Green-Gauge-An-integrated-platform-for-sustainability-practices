@@ -1,0 +1,51 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h1 class="display-3">Welcome</h1>
+                <p class="lead">Your Profile</p>
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% bootstrap_form form %}
+                            <button type="submit" class="btn btn-secondary btn-lg bg-dark">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+{% endblock %}
+
+{% block css %}
+<style>
+  main{
+    background-color: forestgreen;
+  }
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .col-md-9 h1{
+        text-align: center;
+        font-weight: 300;
+  }
+  .col-md-9 p{
+    text-align: center;
+    font-weight: 300;
+  }
+  .card{
+    background-color: rgba(0, 6, 0, 0.247);
+  }
+  .btn{
+    width: 100%;
+  }
+</style>
+{% endblock %}

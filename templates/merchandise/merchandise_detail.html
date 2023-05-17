@@ -1,0 +1,46 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block content %}
+
+  <h1 id="title">{{ merchandise.name }}</h1>
+  <img src="{{merchandise.image.url}}" id="title-image" alt="article">
+
+  <p id="desc">{{ merchandise.description }}</p>
+  <a href="{% url 'checkout' %}"><button class="btn btn-primary btn-lg bg-dark">Checkout</button></a>
+
+{% endblock %}
+
+{% block css %}
+  
+  <style>
+    #title{
+      text-align: center;
+      margin-top: 20px;
+    }
+    #title-image{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 400px;
+    }
+    #desc{
+      text-align: center;
+      margin-top: 20px;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    .btn-primary{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock  %}
+  
+
+  

@@ -1,0 +1,87 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+{% block content %}
+<div class="container" style="background-color:forestgreen;">
+    <div class="row">
+        <div class="col-md-7">
+            <h1 class="display-1">Welcome to the blog</h1>
+        </div>
+        <!-- display the content in a list/grid -->
+        <div class="col-md-9">
+
+            {% for item in articles %}
+            <div class="card mb-3">
+
+                {% if item.image %}
+                <img src="{{item.image.url}}" alt="" class="card-img">
+                {% endif %}
+
+                <div class="card-body">
+                    <h3 class="card-title">{{item.title}}</h3>
+                    <small>{{item.date}}</small><br>
+                    <button class="read-more">
+                        <a href="{% url 'details' item.id %}" style="text-decoration: none;color: black;">Read more</a>
+                    </button>
+                </div>
+            </div>
+            {% empty %}
+            <div class="card">
+                <div class="card-body">
+                    <p class="lead">No Articles found</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}
+
+{% block css %}
+<style>
+
+    .col-md-9{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+        gap: 1rem;
+    }
+
+    .row{
+        justify-content: space-evenly;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        outline: 1px solid #000;
+        justify-content: space-around;
+        background-color: black;
+        color: white;
+    }
+    .card-img{
+        height: 100px;
+        width:  100px;
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+       }
+    .read-more{
+        background-color: white;
+        text-decoration: none;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 100%;   
+    }
+    main{
+        background-color: black;
+    }
+</style>
+{% endblock %}
+{% block js %}{% endblock js %}
+    

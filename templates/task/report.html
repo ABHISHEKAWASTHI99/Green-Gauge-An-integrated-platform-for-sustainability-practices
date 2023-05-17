@@ -1,0 +1,64 @@
+{% extends 'layout/base.html' %}
+{% block css %}
+{% load static %}
+<style>
+    body{
+        background-color: black;
+    }
+    
+    .container-fluid{
+        background-color: forestgreen;
+    }
+    .card-img-top{
+        height: 300px;
+        object-fit: cover;
+    }
+</style>
+{% endblock css %}
+
+
+{% block content %}
+<section class="timeline_area section_padding_130">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-6">
+                <div class="p-5 mb-4 bg-light rounded-3">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-1 fw-bold">Your Score {{total_score}}</h1>
+                        <p class="col-md-8 fs-4">You have completed {{total_tasks}} tasks</p>
+                        <a href="{% url 'tasks' %}" class="btn btn-primary btn-lg bg-dark" type="button">
+                            Complete More 
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qCIqFpfDIxJHU6axXRZLlJ34XR9o6KbBKsQXwlaRWg&usqp=CAU&ec=48665701" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">User Report card</h4>
+                        <p class="card-text">With each task you complete, your living style becomes more sustainable.Keep doing more tasks!!</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        
+                        {% for task in user_tasks %}
+                        <li class="list-group-item">
+                            {{task.challenge.category}} > 
+                            {{task.challenge.title}}
+                            {% if task.completed %}
+                            <span class="badge bg-success">+100 points</span> 
+                            {% endif %}
+                        </li>
+                        {% empty %}
+                        
+                        {% endfor %}
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

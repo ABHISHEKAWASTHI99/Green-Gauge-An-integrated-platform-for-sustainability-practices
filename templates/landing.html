@@ -1,0 +1,121 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block css %}
+<style>
+    
+    h1{
+        text-align: center;
+        font-size: 150px;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 3rem;
+    }
+    
+    .img-fluid{
+        height: 25rem;
+        width: 25rem;
+        padding: 3rem;
+    }
+    .upper-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    .Brand-logo-gif{
+        height: 25rem;
+        width: 25rem;
+        padding: 3rem;
+    }
+    .mid-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #022e0b;
+        color: white;
+        padding: 3rem;
+    }
+    .mid-main h4{
+        font-size: 30px;
+    }
+    .mid-main h2{
+        font-size: 50px;
+        
+        
+    }
+    .mid-main p{
+        font-size: 20px;
+        padding: 3rem;
+    }
+    .lower-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color:black;
+        color: white;
+        padding: 3rem;
+        font-size: 20px;
+    }
+    .Mission{
+        list-style-type: none;
+    }
+    .typed{
+        display: inline-block;
+    }
+    .typed-out{      
+        overflow: hidden;
+        border-right: .15rem solid white;
+        white-space: nowrap;
+        color: white;
+        animation:
+        typing 3.5s forwards;
+        font-size: 1.6rem;
+        width:0rem;
+    }
+    
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="upper-main">
+    <img src="\media\GREEN GAUGE LOGO.png" class="img-fluid" alt="Brand-logo">
+</div>
+
+<div class="mid-main">
+    <h4>What is your</h4>
+    <div class="typed"> <h2 class="typed-out">Sustainable impact ?</h2></div>
+    <h4 style="padding: 1rem;">Take a step now</h4>
+    <a href="{% url 'tasks' %}"><img src="media\foot-en.png" alt="Take yor first step now!"/>
+        
+    </a>
+    
+</div>
+
+<div class="lower-main">
+    <h2> Our Mission</h2>
+    <li class="Mission">
+        <ul>
+            Our mission is to provide a platform for users to track their sustainable impact and to provide them with the tools to improve their impact.
+        </ul>
+        
+        <ul>
+            We are here to inspire individuals, businesses, and communities to take action towards a more sustainable future.
+        </ul>
+        
+        <ul>
+            Through informative articles, practical tips, and engaging resources, we aim to educate and empower our audience to make a positive impact on the planet.
+        </ul>
+    </li>
+</div>
+{% endblock %}
+{% block js %} {% endblock %}
+ 

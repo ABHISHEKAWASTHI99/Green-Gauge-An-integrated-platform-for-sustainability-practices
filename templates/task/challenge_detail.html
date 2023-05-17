@@ -1,0 +1,41 @@
+{% extends 'layout/base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% block content %}
+<h1 id="title">{{ challenge.title }}</h1>
+
+{% if challenge.image %}
+<img src="{{challenge.image.url}}" id="title-image" alt="article">
+{% else %}
+  
+{% endif %}
+  
+<p>{{ challenge.body }}</p>
+
+<p class="lead">
+  
+  {% if user_task.completed %}
+    <a class="btn btn-success">Completed</a>
+  {% else %}
+    <a class="btn btn-danger">Incomplete</a>
+  {% endif %}
+
+</p>
+
+{% endblock %}
+
+
+{% block css %}
+  <style>
+    .row{
+      display: flex;
+    }
+
+    .img-fluid{
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+  </style>
+{% endblock %}
+  
