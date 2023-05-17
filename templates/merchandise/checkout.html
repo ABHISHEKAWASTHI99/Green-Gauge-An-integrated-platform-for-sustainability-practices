@@ -3,8 +3,11 @@
 {% load static %}
 
 {% block content %}
+    <div class="container vh-100">
         <div id="paypal-button-container" class="col-md-4 mx-auto">
+            <h1 id="payheading">-Pay and Support Us-</h1>
         </div>
+    </div>        
 {% endblock  %}
     
 
@@ -19,31 +22,32 @@
         font-weight: bold;
         color: #000000;
     }
-    
 </style>
+
 <script src="https://www.paypal.com/sdk/js?client-id=AcpUN_USimIVMIEDq7x1_Q1O9cimVuWpRKhClqU4O5wFosXfO7UODI9-j2R3JM0tX26WcHNmafi39T_4&currency=USD"></script>
-  <!-- Set up a container element for the button -->
-  <script>
-  paypal.Buttons({
-  // Set up the transaction
-  createOrder: function (data, actions) {
-      return actions.order.create({
-          purchase_units: [{
-              amount: {
-                  value: '{{merchandise.price}}'
-              }
-          }]
-      });
-  },
-  // Finalize the transaction
-  onApprove: function (data, actions) {
-      return actions.order.capture().then(function (details) {
-          // Show a success message to the buyer
-          alert('Transaction completed by ' + details.payer.name
-              .given_name + '!');
-      });
-  }
-  }).render('#paypal-button-container');
+<!-- Set up a container element for the button -->
+<script>
+paypal.Buttons({
+// Set up the transaction
+createOrder: function (data, actions) {
+    return actions.order.create({
+        purchase_units: [{
+            amount: {
+                value: '{{merchandise.price}}'
+            }
+        }]
+    });
+},
+// Finalize the transaction
+onApprove: function (data, actions) {
+    return actions.order.capture().then(function (details) {
+        // Show a success message to the buyer
+        alert('Transaction completed by ' + details.payer.name
+            .given_name + '!');
+    });
+}
+}).render('#paypal-button-container');
 </script>
+
 {% endblock  %}
     

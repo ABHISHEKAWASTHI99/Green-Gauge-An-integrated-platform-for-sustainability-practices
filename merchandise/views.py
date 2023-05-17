@@ -6,7 +6,6 @@ from .filters import MerchandiseFilter
 from django.shortcuts import redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
-import stripe
 from django.views import View
 
 # Create your views here.
@@ -26,6 +25,6 @@ def merchandise_detail(request, merchandise_id):
     }
     
     return render(request, 'merchandise/merchandise_detail.html', context)
-
+@login_required
 def checkout(request):
     return render(request, 'merchandise/checkout.html')
