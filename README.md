@@ -14,12 +14,18 @@ User Feedback: The website includes a feedback system that allows users to provi
 
 # Technologies Used
 Front-end: HTML, CSS, JavaScript
+
 Back-end: Django
+
 Payment Gateway Integration: Pypal
+
 Chatbot: Random forest classifictaion
 
 # Usage
 Access the website using a web browser.
+
 Navigate through the different sections, such as the blog, tasks, merchandise, and chatbot interaction.
+
 Read articles, complete tasks, purchase merchandise, and interact with the chatbot as desired.
+
 Provide feedback and suggestions through the feedback system.
